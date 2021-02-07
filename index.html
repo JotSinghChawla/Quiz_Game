@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz Test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            body {
+                background-color: lightgray;
+            }
+            .header {
+                text-align: center;
+                position: ;
+                top: 0;
+                left: 0;
+                margin: 0 auto;
+                width: 100%;
+                height: 5rem;
+                background-color: #151515;
+                color: white;
+            }
+            .card {
+                text-align: left;
+                background-color: white;
+                width: 60%;
+                margin: 20vh auto;
+                padding: 10px 20px;
+                border-radius: 15px;
+            }
+            .incorrect {
+                padding:20px;
+                background-color: lightpink;
+                color: maroon;
+                width: 9rem;
+                font-size: x-large;
+                display: none;
+            }
+            .correct {
+                padding:20px;
+                background-color: lightgreen;
+                color: darkgreen;
+                width: 8rem;
+                font-size: x-large;
+                display: block;    
+            }
+            button {
+                margin:10px 10px 0px 0px ;
+            }
+            form {
+                line-height: 30px;
+                font-size: x-large;
+            }
+            .visible {
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="header">
+                <h1 id="navbar_heading">QUIZ</h1>
+            </div>
+        </header>
+        <div class="card">
+            <form>
+                <h2 id="question">Which of these is not a programming language ?</h2>
+                <div id="select">
+                    <input type="radio" id="option1" name="question" value="option-1">
+                    <label for="option1">Javascript</label> <br>
+                    <input type="radio" id="option2" name="question" value="option-2">
+                    <label for="option2">Java</label> <br>
+                    <input type="radio" id="option3" name="question" value="option-3">
+                    <label for="option3">HTML</label> <br>
+                    <input type="radio" id="option4" name="question" value="option-4">
+                    <label for="option4">CPP</label> <br>
+                </div>
+                <div class="incorrect answer">Incorrect</div>
+                <button id="submit" class="btn btn-warning" type="button">Submit</button>
+                <button id="next" class="btn btn-success" type="button">Next</button>   
+            </form>
+        </div>
+        
+        <script src = "index.js"></script>
+    </body>
+</html>
