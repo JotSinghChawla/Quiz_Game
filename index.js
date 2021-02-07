@@ -6,7 +6,7 @@ var card = [
         option2 : "Java",
         option3 : "HTML",
         option4 : "CPP",
-        correct : "option-3" 
+        correct : "option3" 
     },
     {
         key : 1,
@@ -15,9 +15,50 @@ var card = [
         option2 : "int",
         option3 : "let",
         option4 : "const",
-        correct : "option-2" 
+        correct : "option2" 
+    },
+    {
+        key : 2,
+        question : "A complete graph can have ?",
+        option1 : "nn - 2 spanning trees",
+        option2 : "int",
+        option3 : "let",
+        option4 : "const",
+        correct : "option2" 
+    },
+    {
+        key : 1,
+        question : "Which of the following is not a way to declare variable in Javascript ?",
+        option1 : "var",
+        option2 : "int",
+        option3 : "let",
+        option4 : "const",
+        correct : "option2" 
+    },
+    {
+        key : 1,
+        question : "Which of the following is not a way to declare variable in Javascript ?",
+        option1 : "var",
+        option2 : "int",
+        option3 : "let",
+        option4 : "const",
+        correct : "option2" 
+    },
+    {
+        key : 1,
+        question : "Which of the following is not a way to declare variable in Javascript ?",
+        option1 : "var",
+        option2 : "int",
+        option3 : "let",
+        option4 : "const",
+        correct : "option2" 
     }
-];
+]
+
+var addQuestion = document.querySelector('#scoreBoard ul');
+card.forEach(function(add){
+    addQuestion.innerHTML+= `<li>${add.question} - <span class="badge badge-success">${add[add.correct]}</span></li>` ;
+});
 let current_key = 0;
 let result = 0;
 let select_input = document.querySelectorAll('#select [name="question"]');
@@ -49,6 +90,8 @@ document.getElementById('next').addEventListener('click', function(){
     }
     else if(current_key == 2) {
         document.getElementById('navbar_heading').innerText = 'Score: ' + result;
+        document.getElementById('card').style.display = 'none';
+        document.getElementById('scoreBoard').className = "";
     }
     else {
         select_input.forEach(function(check){
@@ -64,5 +107,6 @@ document.getElementById('next').addEventListener('click', function(){
         document.querySelector('[for="option3"]').innerText = card[current_key].option3;
         document.querySelector('[for="option4"]').innerText = card[current_key].option4;
     }
-
 });
+
+
