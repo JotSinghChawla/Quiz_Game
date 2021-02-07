@@ -1,59 +1,8 @@
-var card = [
-    {
-        key : 0,
-        question : "Which of these is not a programming language ?",
-        option1 : "Javascript",
-        option2 : "Java",
-        option3 : "HTML",
-        option4 : "CPP",
-        correct : "option3" 
-    },
-    {
-        key : 1,
-        question : "Which of the following is not a way to declare variable in Javascript ?",
-        option1 : "var",
-        option2 : "int",
-        option3 : "let",
-        option4 : "const",
-        correct : "option2" 
-    },
-    {
-        key : 2,
-        question : "A complete graph can have ?",
-        option1 : "nn - 2 spanning trees",
-        option2 : "int",
-        option3 : "let",
-        option4 : "const",
-        correct : "option2" 
-    },
-    {
-        key : 1,
-        question : "Which of the following is not a way to declare variable in Javascript ?",
-        option1 : "var",
-        option2 : "int",
-        option3 : "let",
-        option4 : "const",
-        correct : "option2" 
-    },
-    {
-        key : 1,
-        question : "Which of the following is not a way to declare variable in Javascript ?",
-        option1 : "var",
-        option2 : "int",
-        option3 : "let",
-        option4 : "const",
-        correct : "option2" 
-    },
-    {
-        key : 1,
-        question : "Which of the following is not a way to declare variable in Javascript ?",
-        option1 : "var",
-        option2 : "int",
-        option3 : "let",
-        option4 : "const",
-        correct : "option2" 
-    }
-]
+document.getElementById('question').innerText = card[0].question;
+document.querySelector('[for="option1"]').innerText = card[0].option1;
+document.querySelector('[for="option2"]').innerText = card[0].option2;
+document.querySelector('[for="option3"]').innerText = card[0].option3;
+document.querySelector('[for="option4"]').innerText = card[0].option4;
 
 var addQuestion = document.querySelector('#scoreBoard ul');
 card.forEach(function(add){
@@ -88,7 +37,7 @@ document.getElementById('next').addEventListener('click', function(){
     if(select.disabled == false) {
         alert('Please Submit the solution');
     }
-    else if(current_key == 2) {
+    else if(current_key == 10) {
         document.getElementById('navbar_heading').innerText = 'Score: ' + result;
         document.getElementById('card').style.display = 'none';
         document.getElementById('scoreBoard').className = "";
